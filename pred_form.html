@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{ url_for('static',filename='styles/google_form.css') }}">
+	<title>Prediction</title>
+</head>
+<body>
+	<div class="container">
+		<form method="post" action="/prediction" name="contact-form">
+			<h4>Sleeping Disorder Prediction</h4>
+			<input type="text" name="Gender" placeholder="Enter Gender">
+			<input type="text" name="Age" placeholder="Enter Age">
+			<input type="text" name="Occupation" placeholder="Enter Occupation">
+            <input type="text" name="Sleep_Duration" placeholder="Enter Sleep_Duration">
+            <input type="text" name="Quality_of_Sleep" placeholder="Enter Quality_of_Sleep">
+            <input type="text" name="physical_activity" placeholder="Enter physical_activity">
+            <input type="text" name="Stress_level" placeholder="Enter Stress_level">
+            <input type="text" name="BMI_Category" placeholder="Enter BMI_Category">
+            <input type="text" name="Systolic_bp" placeholder="Enter Systolic_bp">
+			<input type="text" name="Diastolic_bp" placeholder="Enter Diastolic_bp">
+            <input type="text" name="Heart_Rate" placeholder="Enter Heart_Rate">
+            <input type="text" name="Daily_Steps" placeholder="Enter Daily_Steps">
+			<input type="submit" value="Predict" id="submit">
+			<p class="text-white">{{prediction}}</p>
+		</form>
+	</div>
+
+</body>
+</html>
